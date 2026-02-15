@@ -8,10 +8,7 @@
   <div class="plr--150 plr_lg--30 plr_md--30 plr_sm--30 plr_mobile--15">
     <div class="row row--25">
       <div class="col-xxl-3 col-lg-12">
-        <div
-          class="d-flex flex-wrap align-content-start h-100 w-100 tab-content-overlay-to-top"
-          id="home"
-        >
+        <div class="d-flex flex-wrap align-content-start h-100 w-100 tab-content-overlay-to-top" id="home">
           <div class="position-sticky sticky-top tmp-sticky-top w-100">
             <div class="tmp-contact-about-inner">
               <div class="thumbnail">
@@ -24,18 +21,10 @@
                 </div>
                 <div class="description">
                   <div class="info-box">
-                    <span class="phone"
-                      >Phone:
-                      <a href="tel:{{ profile.phone }}"
-                        >{{ profile.phone }}</a
-                      ></span
-                    >
-                    <span class="mail"
-                      >Email:
-                      <a href="mailto:{{ profile.email }}"
-                        >{{ profile.email }}</a
-                      ></span
-                    >
+                    <span class="phone">Phone:
+                      <a href="tel:{{ profile.phone }}">{{ profile.phone }}</a></span>
+                    <span class="mail">Email:
+                      <a href="mailto:{{ profile.email }}">{{ profile.email }}</a></span>
                   </div>
                 </div>
                 <div class="social-area mb--30">
@@ -47,18 +36,11 @@
                   </div>
                 </div>
                 <div class="button-area-banner-one text-xl-center text-start">
-                  <a
-                    class="tmp-btn hover-icon-reverse radius-round download-icon"
-                    href="{% url 'download_cv' %}"
-                  >
+                  <a class="tmp-btn hover-icon-reverse radius-round download-icon" href="{% url 'download_cv' %}">
                     <span class="icon-reverse-wrapper">
                       <span class="btn-text">Download My CV</span>
-                      <span class="btn-icon"
-                        ><i class="fa-regular fa-arrow-down"></i
-                      ></span>
-                      <span class="btn-icon"
-                        ><i class="fa-regular fa-arrow-down"></i
-                      ></span>
+                      <span class="btn-icon"><i class="fa-regular fa-arrow-down"></i></span>
+                      <span class="btn-icon"><i class="fa-regular fa-arrow-down"></i></span>
                     </span>
                   </a>
                 </div>
@@ -71,109 +53,54 @@
       <div class="col-xxl-9 col-lg-12">
         <div class="tab-wrapper-overlay-to-top">
           <div class="position-sticky sticky-top tmp-sticky-top w-100">
-            <ul
-              class="tab-navigation-button style-2 nav tab-smlg nav-pills"
-              id="v-pills-tab"
-              role="tablist"
-            >
+            <ul class="tab-navigation-button style-2 nav tab-smlg nav-pills" id="v-pills-tab" role="tablist">
               <li class="nav-item">
-                <a
-                  class="nav-link tmp-nav active"
-                  id="v-pills-home-tab"
-                  data-bs-toggle="tab"
-                  href="#v-pills-Javascript"
-                  role="tab"
-                  aria-selected="true"
-                  >My About</a
-                >
+                <a class="nav-link tmp-nav active" id="v-pills-home-tab" data-bs-toggle="tab" href="#v-pills-Javascript"
+                  role="tab" aria-selected="true">My About</a>
               </li>
 
               <li class="nav-item">
-                <a
-                  class="nav-link tmp-nav"
-                  id="v-pills-profile-tab"
-                  data-bs-toggle="tab"
-                  href="#v-pills-Design"
-                  role="tab"
-                  aria-selected="true"
-                  >My Resume</a
-                >
+                <a class="nav-link tmp-nav" id="v-pills-profile-tab" data-bs-toggle="tab" href="#v-pills-Design"
+                  role="tab" aria-selected="true">My Resume</a>
               </li>
 
               <li class="nav-item">
-                <a
-                  class="nav-link tmp-nav"
-                  id="v-pills-wordpress-tab"
-                  data-bs-toggle="tab"
-                  href="#v-pills-Wordpress"
-                  role="tab"
-                  aria-selected="true"
-                  >My Work</a
-                >
+                <a class="nav-link tmp-nav" id="v-pills-wordpress-tab" data-bs-toggle="tab" href="#v-pills-Wordpress"
+                  role="tab" aria-selected="true">My Work</a>
               </li>
 
               <li class="nav-item">
-                <a
-                  class="nav-link tmp-nav"
-                  id="v-pills-settings-tabs"
-                  data-bs-toggle="tab"
-                  href="#v-pills-settings"
-                  role="tab"
-                  aria-selected="true"
-                  >My Blog</a
-                >
+                <a class="nav-link tmp-nav" id="v-pills-settings-tabs" data-bs-toggle="tab" href="#v-pills-settings"
+                  role="tab" aria-selected="true">My Blog</a>
               </li>
 
               <li class="nav-item">
-                <a
-                  class="nav-link tmp-nav"
-                  id="v-pills-python-tabs"
-                  data-bs-toggle="tab"
-                  href="#v-pills-python"
-                  role="tab"
-                  aria-selected="true"
-                  >My Contact</a
-                >
+                <a class="nav-link tmp-nav" id="v-pills-python-tabs" data-bs-toggle="tab" href="#v-pills-python"
+                  role="tab" aria-selected="true">My Contact</a>
               </li>
             </ul>
           </div>
 
           <div class="tmp-tab-content-area mt--40">
-            <div
-              class="tmp-all-tab-content tab-content"
-              id="v-pills-tabContent"
-            >
-              <div
-                class="tab-pane fade show active"
-                id="v-pills-Javascript"
-                role="tabpanel"
-                aria-labelledby="v-pills-home-tab"
-              >
+            <div class="tmp-all-tab-content tab-content" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="v-pills-Javascript" role="tabpanel"
+                aria-labelledby="v-pills-home-tab">
                 <!-- Start about Area -->
                 <div id="about" class="tmp-about-area">
                   <div class="about-us-right-content-wrap">
                     <div class="section-head text-align-left mb--50">
-                      <h2
-                        class="custom-title mb--20 tmp-scroll-trigger tmp-fade-in animation-order-1"
-                      >
+                      <h2 class="custom-title mb--20 tmp-scroll-trigger tmp-fade-in animation-order-1">
                         {{ about.section_title|default:"About Me" }}
                         <span>
-                          <img
-                            src="{% static 'assets/images/custom-line/custom-line.png' %}"
-                            alt="custom-line"
-                          />
+                          <img src="{% static 'assets/images/custom-line/custom-line.png' %}" alt="custom-line" />
                         </span>
                       </h2>
 
-                      <h2
-                        class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2"
-                      >
-                        {{ about.heading|default:"Elevate your brand with a professional" }}
+                      <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
+                        {{ about.heading|default:"Elevate your brand with a iprofessional" }}
                       </h2>
 
-                      <p
-                        class="description tmp-scroll-trigger tmp-fade-in animation-order-3"
-                      >
+                      <p class="description tmp-scroll-trigger tmp-fade-in animation-order-3">
                         {{ about.description }}
                       </p>
                     </div>
@@ -184,8 +111,7 @@
                       {% for service in services %}
                       <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                         <div
-                          class="about-us-card tmp-scroll-trigger tmp-fade-in tmponhover animation-order-{{ forloop.counter }}"
-                        >
+                          class="about-us-card tmp-scroll-trigger tmp-fade-in tmponhover animation-order-{{ forloop.counter }}">
                           <div class="card-head">
                             <div class="logo-img">
                               <i class="{{ service.icon }}"></i>
@@ -204,11 +130,7 @@
                         <div class="col-lg-3 col-sm-6 col-12">
                           <div class="counter-card">
                             <h3 class="counter counter-title">
-                              <span
-                                class="odometer"
-                                data-count="{{ counter.number }}"
-                                >0</span
-                              >{{ counter.suffix }}
+                              <span class="odometer" data-count="{{ counter.number }}">0</span>{{ counter.suffix }}
                             </h3>
                             <p class="counter-para">{{ counter.title }}</p>
                           </div>
@@ -222,34 +144,20 @@
                 <!-- End about Area -->
               </div>
 
-              <div
-                class="tab-pane fade"
-                id="v-pills-Design"
-                role="tabpanel"
-                aria-labelledby="v-pills-profile-tab"
-              >
+              <div class="tab-pane fade" id="v-pills-Design" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                 <div class="tmp-resume-area" id="resume">
                   <div class="inner">
                     <div class="section-head text-align-left mb--50">
-                      <h2
-                        class="custom-title mb--20 tmp-scroll-trigger tmp-fade-in animation-order-1"
-                      >
+                      <h2 class="custom-title mb--20 tmp-scroll-trigger tmp-fade-in animation-order-1">
                         {{resume.title}}
-                        <span
-                          ><img
-                            src="{% static 'assets/images/custom-line/custom-line.png' %}"
-                            alt="custom-line"
-                        /></span>
+                        <span><img src="{% static 'assets/images/custom-line/custom-line.png' %}"
+                            alt="custom-line" /></span>
                       </h2>
 
-                      <h2
-                        class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2"
-                      >
+                      <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
                         {{ resume.subtitle }}
                       </h2>
-                      <p
-                        class="description tmp-scroll-trigger tmp-fade-in animation-order-3"
-                      >
+                      <p class="description tmp-scroll-trigger tmp-fade-in animation-order-3">
                         {{ resume.description }}
                       </p>
                     </div>
@@ -258,8 +166,7 @@
                       {% for edu in education %}
                       <div class="col-lg-6 col-sm-6">
                         <div
-                          class="education-experience-card tmp-scroll-trigger tmponhover tmp-fade-in animation-order-1"
-                        >
+                          class="education-experience-card tmp-scroll-trigger tmponhover tmp-fade-in animation-order-1">
                           <h4 class="edu-sub-title">{{ edu.title }}</h4>
                           <h2 class="edu-title">{{ edu.year }}</h2>
                           <p class="edu-para">{{ edu.description }}</p>
@@ -273,41 +180,21 @@
                         <div class="col-lg-6">
                           <div class="progress-wrapper">
                             <div class="content">
-                              <h2
-                                class="custom-title mb--30 tmp-scroll-trigger tmp-fade-in animation-order-1"
-                              >
+                              <h2 class="custom-title mb--30 tmp-scroll-trigger tmp-fade-in animation-order-1">
                                 Design Skill
-                                <span
-                                  ><img
-                                    src="{% static 'assets/images/custom-line/custom-line.png' %}"
-                                    alt="custom-line"
-                                /></span>
+                                <span><img src="{% static 'assets/images/custom-line/custom-line.png' %}"
+                                    alt="custom-line" /></span>
                               </h2>
                               {% for skill in design_skills %}
-                              <div
-                                class="progress-charts"
-                                style="margin-bottom: 20px"
-                              >
-                                <h6
-                                  class="heading heading-h6"
-                                  style="margin-bottom: 10px"
-                                >
+                              <div class="progress-charts" style="margin-bottom: 20px">
+                                <h6 class="heading heading-h6" style="margin-bottom: 10px">
                                   {{ skill.name }}
                                 </h6>
                                 <div class="progress">
-                                  <div
-                                    class="progress-bar wow fadeInLeft"
-                                    data-wow-duration="0.8s"
-                                    data-wow-delay=".3s"
-                                    role="progressbar"
-                                    style="width: {{ skill.percent }}% !important"
-                                    aria-valuenow="{{ skill.percent }}"
-                                    aria-valuemin="0"
-                                    aria-valuemax="100"
-                                  >
-                                    <span class="percent-label"
-                                      >{{ skill.percent }}%</span
-                                    >
+                                  <div class="progress-bar wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay=".3s"
+                                    role="progressbar" style="width: {{ skill.percent }}% !important"
+                                    aria-valuenow="{{ skill.percent }}" aria-valuemin="0" aria-valuemax="100">
+                                    <span class="percent-label">{{ skill.percent }}%</span>
                                   </div>
                                 </div>
                               </div>
@@ -319,41 +206,21 @@
                         <div class="col-lg-6">
                           <div class="progress-wrapper">
                             <div class="content">
-                              <h2
-                                class="custom-title mb--30 tmp-scroll-trigger tmp-fade-in animation-order-1"
-                              >
+                              <h2 class="custom-title mb--30 tmp-scroll-trigger tmp-fade-in animation-order-1">
                                 Development Skill
-                                <span
-                                  ><img
-                                    src="{% static 'assets/images/custom-line/custom-line.png' %}"
-                                    alt="custom-line"
-                                /></span>
+                                <span><img src="{% static 'assets/images/custom-line/custom-line.png' %}"
+                                    alt="custom-line" /></span>
                               </h2>
                               {% for skill in dev_skills %}
-                              <div
-                                class="progress-charts"
-                                style="margin-bottom: 20px"
-                              >
-                                <h6
-                                  class="heading heading-h6"
-                                  style="margin-bottom: 10px"
-                                >
+                              <div class="progress-charts" style="margin-bottom: 20px">
+                                <h6 class="heading heading-h6" style="margin-bottom: 10px">
                                   {{ skill.name }}
                                 </h6>
                                 <div class="progress">
-                                  <div
-                                    class="progress-bar wow fadeInLeft"
-                                    data-wow-duration="0.8s"
-                                    data-wow-delay=".3s"
-                                    role="progressbar"
-                                    style="width: {{ skill.percent }}% !important"
-                                    aria-valuenow="{{ skill.percent }}"
-                                    aria-valuemin="0"
-                                    aria-valuemax="100"
-                                  >
-                                    <span class="percent-label"
-                                      >{{ skill.percent }}%</span
-                                    >
+                                  <div class="progress-bar wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay=".3s"
+                                    role="progressbar" style="width: {{ skill.percent }}% !important"
+                                    aria-valuenow="{{ skill.percent }}" aria-valuemin="0" aria-valuemax="100">
+                                    <span class="percent-label">{{ skill.percent }}%</span>
                                   </div>
                                 </div>
                               </div>
@@ -365,22 +232,16 @@
                     </div>
 
                     <div class="inner pt--60">
-                      <h2
-                        class="custom-title mb--30 tmp-scroll-trigger tmp-fade-in animation-order-1"
-                      >
+                      <h2 class="custom-title mb--30 tmp-scroll-trigger tmp-fade-in animation-order-1">
                         Experience
-                        <span
-                          ><img
-                            src="{% static 'assets/images/custom-line/custom-line.png' %}"
-                            alt="custom-line"
-                        /></span>
+                        <span><img src="{% static 'assets/images/custom-line/custom-line.png' %}"
+                            alt="custom-line" /></span>
                       </h2>
                       <div class="row g-5">
                         {% for exp in experience %}
                         <div class="col-lg-6 col-sm-6">
                           <div
-                            class="education-experience-card tmp-scroll-trigger tmponhover tmp-fade-in animation-order-1"
-                          >
+                            class="education-experience-card tmp-scroll-trigger tmponhover tmp-fade-in animation-order-1">
                             <h4 class="edu-sub-title">{{ exp.title }}</h4>
                             <h2 class="edu-title">{{ exp.year }}</h2>
                             <p class="edu-para">{{ exp.description }}</p>
@@ -391,233 +252,208 @@
                     </div>
                   </div>
                 </div>
-
-                <div
-                  class="tab-pane fade"
-                  id="v-pills-Wordpress"
-                  role="tabpanel"
-                  aria-labelledby="v-pills-wordpress-tab"
-                >
-                  <!-- Start Portfolio Area -->
-                  <div class="tmp-portfolio-area" id="portfolio">
-    <div class="inner">
-        <div class="section-head text-align-left mb--50">
-            <h2 class="custom-title mb--20 tmp-scroll-trigger tmp-fade-in animation-order-1">
-                {{ portfolio_section.title }} 
-                <span><img src="{% static 'assets/images/custom-line/custom-line.png' %}" alt="custom-line" /></span>
-            </h2>
-
-            <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
-              {{ portfolio_section.subtitle }}
-            </h2>
-            <p class="description tmp-scroll-trigger tmp-fade-in animation-order-3">
-                {{ portfolio_section.description }} <br />
-                
-            </p>
-        </div>
-        
-        <div class="row g-5"> {% for item in portfolio_items %}
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="tmp-portfolio tmp-scroll-trigger tmp-fade-in animation-order-{{ forloop.counter }}">
-                    {% if item.image %}
-                    <img src="{{ item.image.url }}" alt="{{ item.title }}" />
-                    {% endif %}
-                    
-                    <div class="portfolio-card-content-wrap">
-                        <div class="content-left">
-                            <p class="portfoli-card-para">{{ item.get_category_display }}</p>
-                            <h3 class="portfolio-card-title animated fadeIn">
-                                <a href="{{ item.project_link|default:'#' }}">{{ item.title }}</a>
-                            </h3>
-                        </div>
-                        <div class="portfolio-btn">
-                            <a href="{{ item.project_link|default:'#' }}" class="tmp-arrow-icon-btn">
-                                <div class="btn-inner">
-                                    <i class="tmp-icon fa-solid fa-arrow-up-right"></i>
-                                    <i class="tmp-icon-bottom fa-solid fa-arrow-up-right"></i>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <a href="{{ item.project_link|default:'#' }}" class="over_link"></a>
-                </div>
-            </div>
-            {% empty %}
-            <p>No projects found.</p>
-            {% endfor %}
-        </div>
-    </div>
-</div>
-                  <!-- End portfolio Area -->
-                </div>
-
-                <div
-                  class="tab-pane fade"
-                  id="v-pills-settings"
-                  role="tabpanel"
-                  aria-labelledby="v-pills-settings-tabs"
-                >
-                  <!-- Start News Area -->
-                  <div class="tmp-blog-area" id="blog">
-    <div class="inner">
-        <div class="section-head text-align-left mb--50">
-            <h2 class="custom-title mb--20 tmp-scroll-trigger tmp-fade-in animation-order-1">
-                {{ blog_header.title }} <span><img src="{% static 'assets/images/custom-line/custom-line.png' %}" alt="custom-line" /></span>
-            </h2>
-            <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
-                {{ blog_header.subtitle }}
-            </h2>
-            <p class="description tmp-scroll-trigger tmp-fade-in animation-order-3">
-                {{ blog_header.description }}
-            </p>
-        </div>
-
-        <div class="row g-5">
-            {% for post in blog_posts %} <div class="col-lg-6 col-md-6 col-12">
-                <div class="blog-card-style-two tmp-scroll-trigger tmponhover tmp-fade-in animation-order-{{ forloop.counter }}">
-                    <div class="blog-card-img">
-                        <div class="img-box">
-                            <a href="blog-details.html">
-                                <img class="img-primary hidden-on-mobile" src="{{ post.image.url }}" alt="{{ post.title }}" />
-                                <img class="img-secondary" src="{{ post.image.url }}" alt="{{ post.title }}" />
-                            </a>
-                        </div>
-                        <span>{{ post.date|date:"d M" }}</span> </div>
-                    <div class="blog-content-wrap">
-                        <div class="blog-tags">
-                            <ul>
-                                <li><a href="#"><i class="fa-regular fa-user"></i>{{ post.author }}</a></li>
-                                <li><a href="#"><i class="fa-regular fa-comments"></i>Comments ({{ post.comments_count|stringformat:"02d" }})</a></li>
-                            </ul>
-                        </div>
-                        <h3 class="blog-title">
-                            <a href="blog-details.html">{{ post.title }}</a>
-                        </h3>
-
-                        <div class="tmp-button-here">
-                            <a class="tmp-btn hover-icon-reverse radius-round btn-border btn-md" href="blog-details.html">
-                                <span class="icon-reverse-wrapper">
-                                    <span class="btn-text">Read More</span>
-                                    <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
-                                    <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</div>
-                  <!-- ENd Mews Area -->
-                </div>
-
-                <div
-                  class="tab-pane fade"
-                  id="v-pills-python"
-                  role="tabpanel"
-                  aria-labelledby="v-pills-python-tabs"
-                >
-                  <!-- Start Contact section -->
-                 <div class="tmp-contact-area" id="contacts">
-    <div class="inner">
-        <div class="contact-get-in-touch-wrap">
-            <div class="section-head text-align-left mb--50">
-                <h2 class="custom-title mb--20 tmp-scroll-trigger tmp-fade-in animation-order-1">
-                   {{ contact_section.title }}
-                    <span><img src="{% static 'assets/images/custom-line/custom-line.png' %}" alt="custom-line" /></span>
-                </h2>
-                <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
-                    {{ contact_section.subtitle }}
-                </h2>
-                <p class="description tmp-scroll-trigger tmp-fade-in animation-order-3">
-                    {{ contact_section.description }} <br />
-                </p>
-            </div>
-
-            <div class="contact-inner">
-                <div class="contact-form">
-                    <form id="contact-form" action="" method="POST">
-                        {% csrf_token %} <div class="contact-form-wrapper row">
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <input
-                                        class="input-field"
-                                        name="contact-name"
-                                        placeholder="Your Name"
-                                        id="contact-name"
-                                        type="text"
-                                        required
-                                    />
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <input
-                                        class="input-field"
-                                        name="contact-email"
-                                        placeholder="Your Email"
-                                        type="email"
-                                        required
-                                    />
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <input
-                                        class="input-field"
-                                        name="contact-phone"
-                                        placeholder="Phone Number"
-                                        type="text"
-                                        required
-                                    />
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <input
-                                        class="input-field"
-                                        type="text"
-                                        id="subject"
-                                        placeholder="Subject"
-                                        name="subject"
-                                    />
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <textarea
-                                        class="input-field"
-                                        placeholder="Your Message"
-                                        name="contact-message"
-                                        id="contact-message"
-                                        required
-                                    ></textarea>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <button
-                                    type="submit"
-                                    class="tmp-btn hover-icon-reverse radius-round w-100"
-                                >
-                                    <span class="icon-reverse-wrapper">
-                                        <span class="btn-text">Appointment Now</span>
-                                        <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
-                                        <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-                  <!-- End Contuct section -->
-                </div>
               </div>
+              <div class="tab-pane fade" id="v-pills-Wordpress" role="tabpanel" aria-labelledby="v-pills-wordpress-tab">
+                <!-- Start Portfolio Area -->
+                <div class="tmp-portfolio-area" id="portfolio">
+                  <div class="inner">
+                    <div class="section-head text-align-left mb--50">
+                      <h2 class="custom-title mb--20 tmp-scroll-trigger tmp-fade-in animation-order-1">
+                        {{ portfolio_section.title }}
+                        <span><img src="{% static 'assets/images/custom-line/custom-line.png' %}"
+                            alt="custom-line" /></span>
+                      </h2>
+
+                      <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
+                        {{ portfolio_section.subtitle }}
+                      </h2>
+                      <p class="description tmp-scroll-trigger tmp-fade-in animation-order-3">
+                        {{ portfolio_section.description }} <br />
+                      </p>
+                    </div>
+
+                    <div class="row g-5">
+                      {% for item in portfolio_items %}
+                      <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="tmp-portfolio tmp-scroll-trigger tmp-fade-in animation-order-{{ forloop.counter }}">
+                          {% if item.image %}
+                          <img src="{{ item.image.url }}" alt="{{ item.title }}" />
+                          {% endif %}
+
+                          <div class="portfolio-card-content-wrap">
+                            <div class="content-left">
+                              <p class="portfoli-card-para">
+                                {{ item.get_category_display }}
+                              </p>
+                              <h3 class="portfolio-card-title animated fadeIn">
+                                <a href="{{ item.project_link|default:'#' }}">{{ item.title }}</a>
+                              </h3>
+                            </div>
+                            <div class="portfolio-btn">
+                              <a href="{{ item.project_link|default:'#' }}" class="tmp-arrow-icon-btn">
+                                <div class="btn-inner">
+                                  <i class="tmp-icon fa-solid fa-arrow-up-right"></i>
+                                  <i class="tmp-icon-bottom fa-solid fa-arrow-up-right"></i>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                          <a href="{{ item.project_link|default:'#' }}" class="over_link"></a>
+                        </div>
+                      </div>
+                      {% empty %}
+                      <p>No projects found.</p>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+                <!-- End portfolio Area -->
+              </div>
+
+              <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tabs">
+                <!-- Start News Area -->
+                <div class="tmp-blog-area" id="blog">
+                  <div class="inner">
+                    <div class="section-head text-align-left mb--50">
+                      <h2 class="custom-title mb--20 tmp-scroll-trigger tmp-fade-in animation-order-1">
+                        {{ blog_header.title }}
+                        <span><img src="{% static 'assets/images/custom-line/custom-line.png' %}"
+                            alt="custom-line" /></span>
+                      </h2>
+                      <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
+                        {{ blog_header.subtitle }}
+                      </h2>
+                      <p class="description tmp-scroll-trigger tmp-fade-in animation-order-3">
+                        {{ blog_header.description }}
+                      </p>
+                    </div>
+
+                    <div class="row g-5">
+                      {% for post in blog_posts %}
+                      <div class="col-lg-6 col-md-6 col-12">
+                        <div
+                          class="blog-card-style-two tmp-scroll-trigger tmponhover tmp-fade-in animation-order-{{ forloop.counter }}">
+                          <div class="blog-card-img">
+                            <div class="img-box">
+                              <a href="blog-details.html">
+                                <img class="img-primary hidden-on-mobile" src="{{ post.image.url }}"
+                                  alt="{{ post.title }}" />
+                                <img class="img-secondary" src="{{ post.image.url }}" alt="{{ post.title }}" />
+                              </a>
+                            </div>
+                            <span>{{ post.date|date:"d M" }}</span>
+                          </div>
+                          <div class="blog-content-wrap">
+                            <div class="blog-tags">
+                              <ul>
+                                <li>
+                                  <a href="#"><i class="fa-regular fa-user"></i>{{
+                                    post.author }}</a>
+                                </li>
+                                <li>
+                                  <a href="#"><i class="fa-regular fa-comments"></i>Comments ({{
+                                    post.comments_count|stringformat:"02d"
+                                    }})</a>
+                                </li>
+                              </ul>
+                            </div>
+                            <h3 class="blog-title">
+                              <a href="blog-details.html">{{ post.title }}</a>
+                            </h3>
+
+                            <div class="tmp-button-here">
+                              <a class="tmp-btn hover-icon-reverse radius-round btn-border btn-md"
+                                href="blog-details.html">
+                                <span class="icon-reverse-wrapper">
+                                  <span class="btn-text">Read More</span>
+                                  <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
+                                  <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+                <!-- ENd Mews Area -->
+              </div>
+
+              <div class="tab-pane fade" id="v-pills-python" role="tabpanel" aria-labelledby="v-pills-python-tabs">
+                <!-- Start Contact section -->
+                <div class="tmp-contact-area" id="contacts">
+                  <div class="inner">
+                    <div class="contact-get-in-touch-wrap">
+                      <div class="section-head text-align-left mb--50">
+                        <h2 class="custom-title mb--20 tmp-scroll-trigger tmp-fade-in animation-order-1">
+                          {{ contact_section.title }}
+                          <span><img src="{% static 'assets/images/custom-line/custom-line.png' %}"
+                              alt="custom-line" /></span>
+                        </h2>
+                        <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
+                          {{ contact_section.subtitle }}
+                        </h2>
+                        <p class="description tmp-scroll-trigger tmp-fade-in animation-order-3">
+                          {{ contact_section.description }} <br />
+                        </p>
+                      </div>
+
+                      <div class="contact-inner">
+                        <div class="contact-form">
+                          <form id="contact-form" action="" method="POST">
+                            {% csrf_token %}
+                            <div class="contact-form-wrapper row">
+                              <div class="col-lg-6">
+                                <div class="form-group">
+                                  <input class="input-field" name="contact-name" placeholder="Your Name"
+                                    id="contact-name" type="text" required />
+                                </div>
+                              </div>
+                              <div class="col-lg-6">
+                                <div class="form-group">
+                                  <input class="input-field" name="contact-email" placeholder="Your Email" type="email"
+                                    required />
+                                </div>
+                              </div>
+                              <div class="col-lg-6">
+                                <div class="form-group">
+                                  <input class="input-field" name="contact-phone" placeholder="Phone Number" type="text"
+                                    required />
+                                </div>
+                              </div>
+                              <div class="col-lg-6">
+                                <div class="form-group">
+                                  <input class="input-field" type="text" id="subject" placeholder="Subject"
+                                    name="subject" />
+                                </div>
+                              </div>
+                              <div class="col-lg-12">
+                                <div class="form-group">
+                                  <textarea class="input-field" placeholder="Your Message" name="contact-message"
+                                    id="contact-message" required></textarea>
+                                </div>
+                              </div>
+                              <div class="col-lg-12">
+                                <button type="submit" class="tmp-btn hover-icon-reverse radius-round w-100">
+                                  <span class="icon-reverse-wrapper">
+                                    <span class="btn-text">Appointment Now</span>
+                                    <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
+                                    <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
+                                  </span>
+                                </button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Contuct section -->
+              </div>
+
             </div>
           </div>
         </div>
