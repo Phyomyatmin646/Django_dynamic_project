@@ -386,6 +386,7 @@
                 <div class="tmp-contact-area" id="contacts">
                   <div class="inner">
                     <div class="contact-get-in-touch-wrap">
+
                       <div class="section-head text-align-left mb--50">
                         <h2 class="custom-title mb--20 tmp-scroll-trigger tmp-fade-in animation-order-1">
                           {{ contact_section.title }}
@@ -395,20 +396,18 @@
                         <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">
                           {{ contact_section.subtitle }}
                         </h2>
-                        <p class="description tmp-scroll-trigger tmp-fade-in animation-order-3">
-                          {{ contact_section.description }} <br />
-                        </p>
                       </div>
 
-                      <div class="contact-inner">
+                      <div class="contact-inner mb--50">
                         <div class="contact-form">
                           <form id="contact-form" action="" method="POST">
                             {% csrf_token %}
+                            <input type="hidden" name="form_type" value="appointment">
                             <div class="contact-form-wrapper row">
                               <div class="col-lg-6">
                                 <div class="form-group">
-                                  <input class="input-field" name="contact-name" placeholder="Your Name"
-                                    id="contact-name" type="text" required />
+                                  <input class="input-field" name="contact-name" placeholder="Your Name" type="text"
+                                    required />
                                 </div>
                               </div>
                               <div class="col-lg-6">
@@ -417,29 +416,22 @@
                                     required />
                                 </div>
                               </div>
-                              <div class="col-lg-6">
+                              <div class="col-lg-12">
                                 <div class="form-group">
                                   <input class="input-field" name="contact-phone" placeholder="Phone Number" type="text"
                                     required />
                                 </div>
                               </div>
-                              <div class="col-lg-6">
-                                <div class="form-group">
-                                  <input class="input-field" type="text" id="subject" placeholder="Subject"
-                                    name="subject" />
-                                </div>
-                              </div>
                               <div class="col-lg-12">
                                 <div class="form-group">
                                   <textarea class="input-field" placeholder="Your Message" name="contact-message"
-                                    id="contact-message" required></textarea>
+                                    required></textarea>
                                 </div>
                               </div>
                               <div class="col-lg-12">
                                 <button type="submit" class="tmp-btn hover-icon-reverse radius-round w-100">
                                   <span class="icon-reverse-wrapper">
-                                    <span class="btn-text">Appointment Now</span>
-                                    <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
+                                    <span class="btn-text">Book Appointment</span>
                                     <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
                                   </span>
                                 </button>
@@ -448,6 +440,67 @@
                           </form>
                         </div>
                       </div>
+
+                      <hr class="mb--50" style="border-top: 1px solid #eee;">
+
+                      <div class="section-head text-align-left mb--50">
+                        <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in">Hire Me for Freelance</h2>
+                        <p>If you have a specific project in mind, let's discuss the details.</p>
+                      </div>
+
+                      <div class="contact-inner">
+                        <div class="contact-form">
+                          <input type="hidden" name="form_type" value="hire_me">
+                          {% csrf_token %}
+                          <input type="hidden" name="form_type" value="hire_me">
+                          <div class="contact-form-wrapper row">
+
+                            <div class="col-lg-6">
+                              <div class="form-group">
+                                <select name="project_type" id="project_type" class="input-field"
+                                  style="height: 55px; background-color: transparent;" required>
+                                  <option value="" disabled selected>Select Project Type</option>
+                                  <option value="Web Development">Web Development</option>
+                                  <option value="Mobile App">Mobile App</option>
+                                  <option value="Freelance">Freelance</option>
+                                  <option value="IoT / Robotics">IoT / Robotics</option>
+                                </select>
+                              </div>
+                            </div>
+
+                            <div class="col-lg-6" id="freelance-type-wrapper" style="display: none;">
+                              <div class="form-group">
+                                <select name="freelance_type" id="freelance_type" class="input-field"
+                                  style="height: 55px; background-color: transparent;">
+                                  <option value="" disabled selected>Select Freelance Type</option>
+                                  <option value="Fixed Price">Fixed Price</option>
+                                  <option value="Hourly Rate">Hourly Rate</option>
+                                  <option value="Retainer">Retainer</option>
+                                </select>
+                              </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                              <div class="form-group">
+                                <input class="input-field" type="text" placeholder="Subject / Project Title"
+                                  name="subject" required />
+                              </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                              <button type="submit" class="tmp-btn hover-icon-reverse radius-round w-100"
+                                style="background-color: #FFB400;">
+                                <span class="icon-reverse-wrapper">
+                                  <span class="btn-text">Send Hire Request</span>
+                                  <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
+                                </span>
+                              </button>
+                            </div>
+                          </div>
+                          </form>
+                        </div>
+                      </div>
+
                     </div>
                   </div>
                 </div>

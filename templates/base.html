@@ -24,7 +24,7 @@
     <!-- custom css -->
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-default.min.css" />u
+        href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-default.min.css" />
 </head>
 
 <body class="spybody index-ten primary-yellow" data-spy="scroll" data-bs-target=".navbar-example2" data-offset="70">
@@ -187,6 +187,23 @@
         }
 
     );
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const projectTypeSelect = document.getElementById('project_type');
+        const freelanceWrapper = document.getElementById('freelance-type-wrapper');
+        const freelanceSelect = document.getElementById('freelance_type');
+
+        projectTypeSelect.addEventListener('change', function () {
+            if (this.value === 'Freelance') {
+                freelanceWrapper.style.display = 'block';
+                freelanceSelect.setAttribute('required', 'required');
+            } else {
+                freelanceWrapper.style.display = 'none';
+                freelanceSelect.removeAttribute('required');
+            }
+        });
+    });
 </script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {

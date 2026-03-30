@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.http import FileResponse, Http404
-from django.contrib import messages 
+from django.contrib import messages
+from django.core.mail import send_mail
+from django.conf import settings
 from .models import (
     CVModel, BannerModel, AboutModel, ServiceModel, CounterModel,
     EducationModel, SkillModel, ExperienceModel, ResumeModel, 
@@ -8,28 +10,65 @@ from .models import (
 )
 
 def Homepage(request):
-   
     if request.method == "POST":
+       
+        form_type = request.POST.get('form_type', 'appointment')
+        
         name = request.POST.get('contact-name')
         email = request.POST.get('contact-email')
         phone = request.POST.get('contact-phone')
-        subject = request.POST.get('subject')
-        message_text = request.POST.get('contact-message')
+        subject = request.POST.get('subject', 'No Subject')
+        message_text = request.POST.get('contact-message', 'No Message Provided')
 
-        
+       
         ContactMessage.objects.create(
             name=name,
             email=email,
             phone=phone,
-            subject=subject,
+            subject=f"[{form_type.upper()}] {subject}",
             message=message_text
         )
 
-        
-        messages.success(request, "Thank you! Your message has been sent successfully.")
-        
        
+        if form_type == "hire_me":
+            project_type = request.POST.get('project_type', 'N/A')
+            freelance_type = request.POST.get('freelance_type', 'N/A')
+            
+            full_email_body = f"""
+            Hello Phyo Myat Min,
+            
+            You have a new Hire Request (Freelance).
+            
+            Client: {name}
+            Email: {email}
+            Phone: {phone}
+            
+            Project Details:
+            - Category: {project_type}
+            - Freelance Type: {freelance_type}
+            
+            Subject: {subject}
+            Message:
+            {message_text}
+            """
+
+            try:
+                send_mail(
+                    subject=f"Freelance Inquiry: {subject}",
+                    message=full_email_body,
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    recipient_list=['phyomyatmin646@gmail.com'],
+                    fail_silently=False,
+                )
+                messages.success(request, "Hire request sent to Gmail successfully!")
+            except Exception as e:
+                messages.warning(request, "Message saved, but failed to send Gmail notification.")
+        else:
+            
+            messages.success(request, "Thank you! Your message has been sent successfully.")
+        
         return redirect('/#contacts') 
+    
     
     resume = ResumeModel.objects.first()
     education = EducationModel.objects.all()
