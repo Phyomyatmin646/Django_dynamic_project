@@ -1,8 +1,8 @@
 from django.urls import path
-from .views import Homepage, download_cv
-from . import views
+from .views import Homepage, download_cv, blog_detail
 
 urlpatterns = [
-    path('', views.Homepage, name='homepage'),
+    path('', Homepage, name='homepage'),
     path('download-cv/', download_cv, name='download_cv'),
+    path('blog/<slug:slug>/', blog_detail, name='blog_detail'),
 ]

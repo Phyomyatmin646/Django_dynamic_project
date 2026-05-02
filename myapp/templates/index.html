@@ -335,7 +335,7 @@
                           class="blog-card-style-two tmp-scroll-trigger tmponhover tmp-fade-in animation-order-{{ forloop.counter }}">
                           <div class="blog-card-img">
                             <div class="img-box">
-                              <a href="blog-details.html">
+                              <a href="{% url 'blog_detail' post.slug %}">
                                 <img class="img-primary hidden-on-mobile" src="{{ post.image.url }}"
                                   alt="{{ post.title }}" />
                                 <img class="img-secondary" src="{{ post.image.url }}" alt="{{ post.title }}" />
@@ -347,23 +347,22 @@
                             <div class="blog-tags">
                               <ul>
                                 <li>
-                                  <a href="#"><i class="fa-regular fa-user"></i>{{
-                                    post.author }}</a>
+                                  <a href="#"><i class="fa-regular fa-user"></i> {{ post.author }}</a>
                                 </li>
                                 <li>
-                                  <a href="#"><i class="fa-regular fa-comments"></i>Comments ({{
-                                    post.comments_count|stringformat:"02d"
-                                    }})</a>
+                                  <a href="{% url 'blog_detail' post.slug %}">
+                                    <i class="fa-regular fa-comments"></i>
+                                    Comments ({{ post.comments.count|stringformat:"02d" }})
+                                  </a>
                                 </li>
                               </ul>
                             </div>
                             <h3 class="blog-title">
-                              <a href="blog-details.html">{{ post.title }}</a>
+                              <a href="{% url 'blog_detail' post.slug %}">{{ post.title }}</a>
                             </h3>
-
                             <div class="tmp-button-here">
                               <a class="tmp-btn hover-icon-reverse radius-round btn-border btn-md"
-                                href="blog-details.html">
+                                href="{% url 'blog_detail' post.slug %}">
                                 <span class="icon-reverse-wrapper">
                                   <span class="btn-text">Read More</span>
                                   <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
@@ -378,6 +377,7 @@
                     </div>
                   </div>
                 </div>
+
                 <!-- ENd Mews Area -->
               </div>
 
@@ -443,63 +443,83 @@
 
                       <hr class="mb--50" style="border-top: 1px solid #eee;">
 
-                      <div class="section-head text-align-left mb--50">
-                        <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in">Hire Me for Freelance</h2>
-                        <p>If you have a specific project in mind, let's discuss the details.</p>
-                      </div>
-
                       <div class="contact-inner">
                         <div class="contact-form">
-                          <input type="hidden" name="form_type" value="hire_me">
-                          {% csrf_token %}
-                          <input type="hidden" name="form_type" value="hire_me">
-                          <div class="contact-form-wrapper row">
 
-                            <div class="col-lg-6">
-                              <div class="form-group">
-                                <select name="project_type" id="project_type" class="input-field"
-                                  style="height: 55px; background-color: transparent;" required>
-                                  <option value="" disabled selected>Select Project Type</option>
-                                  <option value="Web Development">Web Development</option>
-                                  <option value="Mobile App">Mobile App</option>
-                                  <option value="Freelance">Freelance</option>
-                                  <option value="IoT / Robotics">IoT / Robotics</option>
-                                </select>
+                          <form action="{% url 'homepage' %}" method="POST">
+                            {% csrf_token %}
+
+                            <input type="hidden" name="form_type" value="hire_me">
+
+                            <div class="contact-form-wrapper row">
+
+
+                              <div class="col-lg-6">
+                                <div class="form-group">
+                                  <input class="input-field" type="text" name="contact-name" placeholder="Your Name"
+                                    required />
+                                </div>
+                              </div>
+                              <div class="col-lg-12">
+                                <div class="form-group">
+                                  <input class="input-field" type="text" name="contact-phone"
+                                    placeholder="Your Phone Number" required />
+                                </div>
+                              </div>
+                              <div class="col-lg-6">
+                                <div class="form-group">
+                                  <input class="input-field" type="email" name="contact-email" placeholder="Your Email"
+                                    required />
+                                </div>
+                              </div>
+
+                              <div class="col-lg-6">
+                                <div class="form-group">
+                                  <select name="project_type" id="project_type" class="input-field"
+                                    style="height: 55px; background-color: transparent;" required>
+                                    <option value="" disabled selected>Select Project Type</option>
+                                    <option value="Web Development">Web Development</option>
+                                    <option value="Mobile App">Mobile App</option>
+                                    <option value="Freelance">Freelance</option>
+                                    <option value="IoT / Robotics">IoT / Robotics</option>
+                                  </select>
+                                </div>
+                              </div>
+
+                              <div class="col-lg-6" id="freelance-type-wrapper" style="display: none;">
+                                <div class="form-group">
+                                  <select name="freelance_type" id="freelance_type" class="input-field"
+                                    style="height: 55px; background-color: transparent;">
+                                    <option value="" disabled selected>Select Freelance Type</option>
+                                    <option value="Fixed Price">Fixed Price</option>
+                                    <option value="Hourly Rate">Hourly Rate</option>
+                                    <option value="Retainer">Retainer</option>
+                                  </select>
+                                </div>
+                              </div>
+
+                              <div class="col-lg-12">
+                                <div class="form-group">
+                                  <input class="input-field" type="text" placeholder="Subject / Project Title"
+                                    name="subject" required />
+                                </div>
+                              </div>
+
+                              <div class="col-lg-12">
+                                <button type="submit" class="tmp-btn hover-icon-reverse radius-round w-100"
+                                  style="background-color: #FFB400;">
+                                  <span class="icon-reverse-wrapper">
+                                    <span class="btn-text">Send Hire Request</span>
+                                    <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
+                                  </span>
+                                </button>
                               </div>
                             </div>
-
-                            <div class="col-lg-6" id="freelance-type-wrapper" style="display: none;">
-                              <div class="form-group">
-                                <select name="freelance_type" id="freelance_type" class="input-field"
-                                  style="height: 55px; background-color: transparent;">
-                                  <option value="" disabled selected>Select Freelance Type</option>
-                                  <option value="Fixed Price">Fixed Price</option>
-                                  <option value="Hourly Rate">Hourly Rate</option>
-                                  <option value="Retainer">Retainer</option>
-                                </select>
-                              </div>
-                            </div>
-
-                            <div class="col-lg-12">
-                              <div class="form-group">
-                                <input class="input-field" type="text" placeholder="Subject / Project Title"
-                                  name="subject" required />
-                              </div>
-                            </div>
-
-                            <div class="col-lg-12">
-                              <button type="submit" class="tmp-btn hover-icon-reverse radius-round w-100"
-                                style="background-color: #FFB400;">
-                                <span class="icon-reverse-wrapper">
-                                  <span class="btn-text">Send Hire Request</span>
-                                  <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
-                                </span>
-                              </button>
-                            </div>
-                          </div>
                           </form>
                         </div>
                       </div>
+
+
 
                     </div>
                   </div>
